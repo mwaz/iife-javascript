@@ -1,4 +1,4 @@
-const getUsers  = require('./users')
+const getUsers = require('./users')
 
 describe('Javascript IIFE test', () => {
     test('should get the users array', async () => {

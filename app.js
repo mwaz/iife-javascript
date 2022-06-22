@@ -13,8 +13,8 @@ let friendlyFunction = (function () {
         console.log(`Hello ${greetCount}x`);
         return greetCount++;
     }
-})()
+})();
 
-friendlyFunction()
-friendlyFunction()
-friendlyFunction()
+friendlyFunction();
+friendlyFunction();
+friendlyFunction();

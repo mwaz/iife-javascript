@@ -8,11 +8,9 @@ const getUsers = (async () => {
             .catch((err) => console.log(err))
         return users
     }
-
     return {
         array: await fetchUsers()
-    } 
-
+    }
 })()
 
 module.exports = getUsers
