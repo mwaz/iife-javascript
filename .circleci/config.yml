@@ -1,9 +1,18 @@
 version: 2.1
+
 jobs:
-  build:
+  runner-test:
+    machine: true
+    resource_class: fortefrankie/macosselfhosted
+    steps:
+      - run: echo "Hi I'm on Ruers!"   
+   build:
     working_directory: ~/repo
     docker:
       - image: cimg/node:14.17.1
+    macos:
+      xcode: "14.2.0"
+    resource_class: large
     steps:
       - checkout
       - restore_cache:
@@ -19,4 +28,4 @@ jobs:
           name: Javascript IIFE test
           command: npm test
       - store_artifacts:
-          path: ~/iife-javascript
+          path: ~/iife-javascript-1
